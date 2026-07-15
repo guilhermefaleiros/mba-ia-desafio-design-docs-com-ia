@@ -64,7 +64,7 @@ Do ponto de vista técnico, o desafio é introduzir notificações assíncronas 
 3. Dentro da transação:
    a. Valida transição (canTransition)
    b. Se aplicável, debita ou repõe estoque
-   c. UPDATE订单 SET status = toStatus
+   c. UPDATE SET status = toStatus
    d. INSERT INTO order_status_history
    e. [NOVO] Para cada webhook_endpoint ativo do customer que aceita o toStatus:
       - Gera event_id (UUID v4)
